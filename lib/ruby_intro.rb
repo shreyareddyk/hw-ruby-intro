@@ -14,7 +14,7 @@ end
 
 def sum_to_n? arr, n
   # YOUR CODE HERE
-  arr.combination(2).detect { |num1, num2| num1 + num2 == n } # num1,num2 such that sum equals to n
+  !!arr.combination(2).detect { |num1, num2| num1 + num2 == n } # num1,num2 such that sum equals to n
 end
 
 # Part 2
@@ -26,7 +26,7 @@ end
 
 def starts_with_consonant? s
   # YOUR CODE HERE
-  s == nil ? true : (s[0] =~ /[aeiou\W]/i) ? false : true
+  s == "" ? false : (s[0] =~ /[aeiou\W]/i) ? false : true
 end
 
 def binary_multiple_of_4? s
