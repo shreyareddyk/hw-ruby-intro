@@ -1,0 +1,91 @@
+
+Ruby intro part 1
+  #sum
+    should be defined
+    returns correct sum [20 points]
+    works on the empty array [10 points]
+  #max_2_sum
+    should be defined
+    returns the correct sum [7 points]
+    works even if 2 largest values are the same [3 points]
+    returns zero if array is empty [10 points]
+    returns value of the element if just one element [10 points]
+  #sum_to_n
+    should be defined
+    returns true when any two elements sum to the second argument [30 points] (FAILED - 1)
+    returns false for any single element array [5 points] (FAILED - 2)
+    returns false for an empty array [5 points] (FAILED - 3)
+
+#hello
+  should be defined
+  The hello method returns the correct string [30 points]
+
+#starts_with_consonant?
+  should be defined
+  classifies true cases [10 points]
+  classifies false cases [10 points]
+  works on the empty string [5 points] (FAILED - 4)
+  works on nonletters [5 points]
+
+#binary_multiple_of_4?
+  should be defined
+  classifies valid binary numbers [30 points]
+  rejects invalid binary numbers [10 points]
+
+BookInStock
+  should be defined
+  getters and setters
+    should set ISBN [10 points]
+    should set price [10 points]
+    should be able to change ISBN [10 points]
+    should be able to change price [10 points]
+  constructor
+    should reject invalid ISBN number [10 points]
+    should reject zero price [10 points]
+    should reject negative price [10 points]
+  #price_as_string
+    should be defined
+    should display 33.95 as "$33.95" [10 points]
+    should display 1.1 as $1.10 [10 points]
+    should display 20 as $20.00 [10 points]
+
+Failures:
+
+  1) Ruby intro part 1 #sum_to_n returns true when any two elements sum to the second argument [30 points]
+     Failure/Error: expect(sum_to_n?([1, 2, 3, 4, 5], 5)).to be true # 2 + 3 = 5
+
+       expected true
+            got #<Array:19793440> => [1, 4]
+     # ./spec/part1_spec.rb:48:in `block (3 levels) in <top (required)>'
+
+  2) Ruby intro part 1 #sum_to_n returns false for any single element array [5 points]
+     Failure/Error: expect(sum_to_n?([0], 0)).to be false
+
+       expected false
+            got nil
+     # ./spec/part1_spec.rb:55:in `block (3 levels) in <top (required)>'
+
+  3) Ruby intro part 1 #sum_to_n returns false for an empty array [5 points]
+     Failure/Error: expect(sum_to_n?([], 0)).to be false
+
+       expected false
+            got nil
+     # ./spec/part1_spec.rb:61:in `block (3 levels) in <top (required)>'
+
+  4) #starts_with_consonant? works on the empty string [5 points]
+     Failure/Error: expect(starts_with_consonant?('')).to be_falsy
+
+       expected: falsey value
+            got: true
+     # ./spec/part2_spec.rb:35:in `block (2 levels) in <top (required)>'
+
+Finished in 0.04094 seconds (files took 0.09717 seconds to load)
+34 examples, 4 failures
+
+Failed examples:
+
+rspec ./spec/part1_spec.rb:47 # Ruby intro part 1 #sum_to_n returns true when any two elements sum to the second argument [30 points]
+rspec ./spec/part1_spec.rb:54 # Ruby intro part 1 #sum_to_n returns false for any single element array [5 points]
+rspec ./spec/part1_spec.rb:60 # Ruby intro part 1 #sum_to_n returns false for an empty array [5 points]
+rspec ./spec/part2_spec.rb:34 # #starts_with_consonant? works on the empty string [5 points]
+
